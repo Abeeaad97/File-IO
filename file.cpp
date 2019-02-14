@@ -17,15 +17,16 @@ void display(PERSON per[100], int num);
 void findRichest(PERSON p[100], int num);
 void deposit(string fullName, PERSON p[100], int num);
 void newCopy(string filename, PERSON p[100], int num);
+int count (int num);
 
 int main()
 {
     string fname, lname, fullName, line;
-    int n = 6;
+    int n = 0;
     PERSON p[100];
+    n = count (n);
     ifstream inData;
     inData.open("data.txt");
-
 
     for(int i = 0; i < n; i++)
     {
@@ -110,4 +111,18 @@ void newCopy(string file, PERSON p[100], int num)
 
     outData.close();
 
+}
+int count(int num)
+{
+    ifstream in;
+    string line;
+    in.open("data.txt");
+    while (!in.eof())
+    {
+        getline(in, line);
+        ++num;
+    }
+    in.close();
+    num = num-1;
+    return num;
 }
