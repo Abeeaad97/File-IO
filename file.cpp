@@ -1,3 +1,5 @@
+//Abid Bakhtiyar
+//890459241
 #include <iostream> 
 #include <fstream>
 #include <string>
@@ -19,7 +21,7 @@ void newCopy(string filename, PERSON p[100], int num);
 int main()
 {
     string fname, lname, fullName, line;
-    int n = 0;
+    int n = 6;
     PERSON p[100];
     ifstream inData;
     inData.open("data.txt");
